@@ -2,7 +2,7 @@
 
 ![Tests](https://github.com/YOUR_USERNAME/employees/workflows/Tests%20and%20Coverage/badge.svg)
 ![Coverage](https://img.shields.io/badge/coverage-96.36%25-brightgreen)
-![Python](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue)
+![Python](https://img.shields.io/badge/python-3.12-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-green)
 
 FastAPI CRUD application for managing employees with SQLAlchemy and SQLite.
@@ -99,7 +99,7 @@ The test suite includes 14 integration tests covering:
 GitHub Actions automatically runs tests on:
 - Push to `main` or `develop` branches
 - Pull requests to `main` or `develop` branches
-- Multiple Python versions (3.9, 3.10, 3.11, 3.12)
+- Python 3.12
 
 The API will be available at: http://localhost:8000
 

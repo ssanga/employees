@@ -6,7 +6,7 @@ This workflow automatically runs tests and generates coverage reports on every p
 
 ### Features
 
-- **Multi-version testing**: Tests run on Python 3.9, 3.10, 3.11, and 3.12
+- **Python 3.12**: Tests run on Python 3.12
 - **Code coverage**: Generates coverage reports using `coverage.py`
 - **Codecov integration**: Uploads coverage to Codecov (optional)
 - **PR comments**: Automatically comments coverage on pull requests

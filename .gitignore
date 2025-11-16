@@ -56,9 +56,14 @@ logs/
 # Testing
 .pytest_cache/
 .coverage
+.coverage.*
 htmlcov/
 .tox/
 .hypothesis/
+coverage.xml
+coverage.txt
+*.cover
+.cache
 
 # FastAPI
 .mypy_cache/

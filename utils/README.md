@@ -25,6 +25,12 @@ View database statistics and sample records.
 python utils/check_database.py
 ```
 
+### `generate_coverage_badge.py`
+Generate a static coverage badge markdown for README.
+```bash
+python utils/generate_coverage_badge.py
+```
+
 ## API Testing
 
 ### `paginate_employees.py`

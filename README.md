@@ -1,9 +1,10 @@
 # Employees API
 
 ![Tests](https://github.com/YOUR_USERNAME/employees/workflows/Tests%20and%20Coverage/badge.svg)
-![Coverage](https://img.shields.io/badge/coverage-96.36%25-brightgreen)
+[![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/YOUR_USERNAME/YOUR_GIST_ID/raw/employees-coverage.json)](https://github.com/YOUR_USERNAME/employees/actions)
 ![Python](https://img.shields.io/badge/python-3.12-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-green)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
 FastAPI CRUD application for managing employees with SQLAlchemy and SQLite.
 

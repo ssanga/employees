@@ -43,10 +43,24 @@ jobs:
           coverage report -m
           coverage xml
 
-      - name: Generate coverage badge
+      - name: Extract coverage percentage
         run: |
-          coverage report | grep TOTAL | awk '{print $4}' > coverage.txt
-          echo "COVERAGE=$(cat coverage.txt)" >> $GITHUB_ENV
+          COVERAGE=$(coverage report | grep TOTAL | awk '{print $4}' | sed 's/%//')
+          echo "COVERAGE=$COVERAGE" >> $GITHUB_ENV
+          echo "Coverage: $COVERAGE%"
+
+      - name: Create coverage badge
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: schneegans/dynamic-badges-action@v1.7.0
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: YOUR_GIST_ID
+          filename: employees-coverage.json
+          label: coverage
+          message: ${{ env.COVERAGE }}%
+          valColorRange: ${{ env.COVERAGE }}
+          maxColorRange: 100
+          minColorRange: 0
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
@@ -55,9 +69,11 @@ jobs:
           flags: unittests
           name: codecov-umbrella
           fail_ci_if_error: false
+        continue-on-error: true
 
       - name: Coverage comment
         if: github.event_name == 'pull_request'
         uses: py-cov-action/python-coverage-comment-action@v3
         with:
           GITHUB_TOKEN: ${{ github.token }}
+        continue-on-error: true

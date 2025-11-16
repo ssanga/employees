@@ -42,6 +42,7 @@ venv.bak/
 *.db
 *.sqlite
 *.sqlite3
+test_employees.db
 
 # Environment variables
 .env

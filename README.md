@@ -53,6 +53,26 @@ start_server.bat
 
 The root URL (http://localhost:8000/) automatically redirects to the API documentation.
 
+## Testing
+
+Run the integration tests:
+```bash
+python -m unittest tests.test_employees -v
+```
+
+Or use the batch file:
+```bash
+run_tests.bat
+```
+
+The test suite includes 14 integration tests covering:
+- CREATE operations (valid and invalid data)
+- READ operations (all employees, by ID, pagination)
+- UPDATE operations (full and partial updates)
+- DELETE operations
+- Error handling (404 not found)
+- Root endpoint redirect
+
 The API will be available at: http://localhost:8000
 
 ## API Documentation
